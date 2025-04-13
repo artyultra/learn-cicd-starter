@@ -27,7 +27,7 @@ jobs:
       - name: DB Migration
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: cd sql/schema && goose turso $DATABASE_URL up
+        run: ./scripts/migrateup.sh
 
 
       - id: auth
