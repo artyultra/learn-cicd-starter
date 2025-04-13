@@ -24,8 +24,9 @@ jobs:
       - name: Set up goose
         run: go install github.com/pressly/goose/v3/cmd/goose@latest
 
-      - name: database migration up
-        run: ./scripts/migrate.sh
+      - name: DBl Migragtion
+        run: ./scripts/migrateup.sh
+
 
       - id: auth
         name: Authenticate to Google Cloud
